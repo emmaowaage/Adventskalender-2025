@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kalender - Vegard</title>
+  <style>
+    body { font-family: Arial; background: #fff8f0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+    .door {
+      background: #d73f3f;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎁 Vegard sin julekalender 🎁</h1>
+<p>Klikk på dagens luke!</p>
+
+<div class="grid">
+  <div class="door" onclick="openDoor(1)">1</div>
+  <div class="door" onclick="openDoor(2)">2</div>
+  <div class="door" onclick="openDoor(3)">3</div>
+  <div class="door" onclick="openDoor(4)">4</div>
+  <div class="door" onclick="openDoor(5)">1</div>
+  <div class="door" onclick="openDoor(6)">2</div>
+  <div class="door" onclick="openDoor(7)">3</div>
+  <div class="door" onclick="openDoor(8)">4</div>
+  <div class="door" onclick="openDoor(9)">1</div>
+  <div class="door" onclick="openDoor(10)">2</div>
+  <div class="door" onclick="openDoor(11)">3</div>
+  <div class="door" onclick="openDoor(12)">4</div>
+  <div class="door" onclick="openDoor(13)">1</div>
+  <div class="door" onclick="openDoor(14)">2</div>
+  <div class="door" onclick="openDoor(15)">3</div>
+  <div class="door" onclick="openDoor(16)">4</div>
+  <div class="door" onclick="openDoor(17)">1</div>
+  <div class="door" onclick="openDoor(18)">2</div>
+  <div class="door" onclick="openDoor(19)">3</div>
+  <div class="door" onclick="openDoor(20)">4</div>
+  <div class="door" onclick="openDoor(21)">1</div>
+  <div class="door" onclick="openDoor(22)">2</div>
+  <div class="door" onclick="openDoor(23)">3</div>
+  <div class="door" onclick="openDoor(24)">4</div>
+</div>
+
+<script>
+function openDoor(day) {
+  const today = new Date().getDate();
+  if (today < day) {
+    alert("Du kan ikke åpne denne luken ennå!");
+    return;
+  }
+  window.location.href = `vegard-luke${day}.html`;
+}
+</script>
+
+</body>
+</html>
