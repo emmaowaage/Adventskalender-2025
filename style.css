@@ -9,6 +9,10 @@ h1 {
   color: #d73f3f;
 }
 
+p {
+  font-size: large;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -32,7 +36,59 @@ h1 {
 }
 
 .surprise {
-  max-width: 80%;
+  max-width: 50%;
   border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+}
+
+.links {
+  display: flex;
+  flex-direction: column; /* stabler linkene vertikalt */
+  gap: 10px;               /* avstand mellom linkene */
   margin-top: 20px;
+  text-align: center;      /* sentrer linkene */
+}
+
+.links a {
+  text-decoration: none;    /* fjerner understreking */
+  color: #d73f3f;           /* jule-rød farge */
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid #d73f3f;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.links a:hover {
+  background-color: #d73f3f;
+  color: white;
+}
+
+/* Luker som ikke kan åpnes ennå */
+.door.locked {
+  background-color: #d73f3f; /* rød */
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Luker som er tilgjengelige, men ikke åpnet */
+.door.available {
+  background-color: #d73f3f;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Luker som er åpnet */
+.door.opened {
+  background-color: #4caf50; /* grønn */
+  color: white;
+  cursor: default;
+  box-shadow: none;
+  animation: none;
+}
+
+/* Glød-animasjon for tilgjengelige luker */
+@keyframes glow {
+  from { box-shadow: 0 0 10px #ff4400; }
+  to { box-shadow: 0 0 20px #ff4400; }
 }
