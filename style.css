@@ -2,15 +2,17 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #f6f2ee;
   text-align: center;
-  padding: 50px;
+  padding: 30px 10px;
 }
 
 h1 {
   color: #d73f3f;
+  font-size: 2rem;
 }
 
 p {
-  font-size: large;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .grid {
@@ -21,6 +23,19 @@ p {
   margin: 30px auto;
 }
 
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 kolonner på nettbrett */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner på mobil */
+    gap: 8px;
+  }
+}
+
 .door {
   background-color: #d73f3f;
   color: white;
@@ -29,6 +44,7 @@ p {
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.2s;
+  font-size: 1.2rem;
 }
 
 .door:hover {
@@ -36,7 +52,8 @@ p {
 }
 
 .surprise {
-  max-width: 50%;
+  max-width: 90%;
+  height: auto;
   border-radius: 10px;
   margin: 20px auto;
   display: block;
