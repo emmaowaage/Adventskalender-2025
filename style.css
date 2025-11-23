@@ -1,0 +1,38 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f6f2ee;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #d73f3f;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.door {
+  background-color: #d73f3f;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.door:hover {
+  transform: scale(1.1);
+}
+
+.surprise {
+  max-width: 80%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
