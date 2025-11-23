@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Julekalender</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f6f2ee;
+      text-align: center;
+      padding-top: 80px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎄 Velkommen til julekalenderen 🎄</h1>
+  <p>Skriv inn koden din for å komme til din kalender:</p>
+
+  <input id="codeInput" placeholder="Kode" />
+  <button onclick="login()">Åpne</button>
+
+  <script>
+    function login() {
+      const codes = {
+        "VEGARD2025": "vegard.html",
+        "KARIA2025": "karia.html",
+        "HELENE2025": "helene.html"
+      };
+
+      const entered = document.getElementById("codeInput").value;
+
+      if (codes[entered]) {
+        window.location.href = codes[entered];
+      } else {
+        alert("Feil kode, prøv igjen!");
+      }
+    }
+  </script>
+
+</body>
+</html>
