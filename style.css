@@ -19,7 +19,7 @@ p {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 10px;
-  max-width: 600px;
+  max-width: 900px;
   margin: 30px auto;
 }
 
@@ -102,6 +102,11 @@ p {
   cursor: default;
   box-shadow: none;
   animation: none;
+  background-size: cover;
+  background-position: center;
+  grid-column: span 2; /* åpne luker blir dobbelt så brede */
+  height: 180px;   
+  border-radius: 10px;
 }
 
 /* Glød-animasjon for tilgjengelige luker */
