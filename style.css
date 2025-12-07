@@ -119,14 +119,23 @@ p {
 }
 
 .link-btn {
+  -webkit-appearance: none; /* fjerner native styling på Safari/Chrome */
+  -moz-appearance: none;    /* fjerner native styling på Firefox */
+  appearance: none;         /* generelt */
+  border: 2px solid #d73f3f;
+  border-radius: 8px;
   background: none;
   color: #d73f3f;
   font-weight: bold;
-  padding: 10px 15px;
-  border: 2px solid #d73f3f;
-  border-radius: 8px;
-  cursor: pointer;
+  font-family: inherit;     /* arver samme font som body */
   font-size: 1rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  display: inline-block;
+  box-sizing: border-box;
   transition: background-color 0.2s, color 0.2s;
 }
 
